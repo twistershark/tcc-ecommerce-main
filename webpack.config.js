@@ -2,6 +2,7 @@ const HtmlWebPackPlugin = require("html-webpack-plugin");
 const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPlugin");
 
 const deps = require("./package.json").dependencies;
+
 module.exports = (_, argv) => ({
   output: {
     publicPath: "http://localhost:3000/",
@@ -44,7 +45,9 @@ module.exports = (_, argv) => ({
       name: "ecommerce",
       filename: "remoteEntry.js",
       remotes: {},
-      exposes: {},
+      exposes: {
+        "./products": "./src/constants/products.ts",
+      },
       shared: {
         ...deps,
         react: {
