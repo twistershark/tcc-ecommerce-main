@@ -1,13 +1,11 @@
-import React from 'react';
+import React from "react";
 
 export function Footer() {
   return (
-    <footer className="w-full px-4 sm:px-6 lg:px-8 mx-auto max-w-7xl bg-white text-center lg:text-left">
-      <div className="border-t border-gray-200 p-4  flex items-center justify-center gap-2 text-gray-400">
+    <footer className="ec-w-full ec-px-4 sm:ec-px-6 lg:ec-px-8 ec-mx-auto ec-max-w-7xl ec-bg-white ec-text-center lg:ec-text-left">
+      <div className="ec-border-t ec-border-gray-200 ec-p-4  ec-flex ec-items-center ec-justify-center ec-gap-2 ec-text-gray-400">
         © 2023 Direitos Autorais:
-        <a className=" font-semibold" href="#">
-          Loja Online
-        </a>
+        <strong className="ec-font-semibold">Loja Online</strong>
       </div>
     </footer>
   );

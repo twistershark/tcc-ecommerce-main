@@ -1,9 +1,11 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import { createRoot } from "react-dom/client";
 
-import "./index.scss";
+import "tailwindcss/tailwind.css";
 
 import { Routes } from "./routes";
 
 const App = () => <Routes />;
-ReactDOM.render(<App />, document.getElementById("app"));
+
+const root = createRoot(document.getElementById("app")!);
+root.render(<App />);
