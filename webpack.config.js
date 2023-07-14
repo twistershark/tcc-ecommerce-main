@@ -3,6 +3,11 @@ const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPl
 
 const deps = require("./package.json").dependencies;
 
+const productsURL = process.env.PRODUCTS_URL || "http://localhost:3001";
+const productDetailsURL =
+  process.env.PRODUCT_DETAILS_URL || "http://localhost:3002";
+const cartURL = process.env.CART_URL || "http://localhost:3003";
+
 module.exports = (_, argv) => ({
   output: {
     publicPath: "http://localhost:3000/",
@@ -45,9 +50,9 @@ module.exports = (_, argv) => ({
       name: "ecommerce",
       filename: "remoteEntry.js",
       remotes: {
-        products: "products@http://localhost:3001/remoteEntry.js",
-        productdetails: "productdetails@http://localhost:3002/remoteEntry.js",
-        cart: "cart@http://localhost:3003/remoteEntry.js",
+        products: `products@${productsURL}/remoteEntry.js`,
+        productdetails: `productdetails@${productDetailsURL}/remoteEntry.js`,
+        cart: `cart@${cartURL}/remoteEntry.js`,
       },
       exposes: {},
       shared: {
