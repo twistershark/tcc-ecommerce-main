@@ -4,7 +4,7 @@ import { Layout } from "./components/layout";
 
 import ProductsList from "products/ProductsList";
 import ProductDetails from "productdetails/ProductDetails";
-// import CartContent from "cart/cart-content";
+import Cart from "cart/Cart";
 
 export function Routes() {
   return (
@@ -13,7 +13,7 @@ export function Routes() {
         <Route path="/" element={<Layout />}>
           <Route index element={<ProductsList />} />
           <Route path="/produto/:id" element={<ProductDetails />} />
-          <Route path="/carrinho" element={<div />} />
+          <Route path="/carrinho" element={<Cart />} />
         </Route>
       </Router>
     </BrowserRouter>

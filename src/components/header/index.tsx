@@ -1,7 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+import useCart from "cart/useCart";
+
 export function Header() {
+  const [cart] = useCart();
+  const productsInCart = !!cart ? cart.length : 0;
+
   return (
     <header className="ec-relative ec-bg-white">
       <nav className="ec-mx-auto ec-max-w-7xl ec-px-4 ec-sm:px-6 ec-lg:px-8">
@@ -32,7 +37,7 @@ export function Header() {
                     />
                   </svg>
                   <span className="ec-ml-2 ec-text-sm ec-font-medium ec-text-gray-700 ec-group-hover:ec-text-gray-800">
-                    0
+                    {productsInCart}
                   </span>
                 </Link>
               </div>
