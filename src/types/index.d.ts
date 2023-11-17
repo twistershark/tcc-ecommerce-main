@@ -1,6 +1,11 @@
-declare module "products/ProductsList" {
-  const ProductsList: React.ComponentType;
-  export default ProductsList;
+declare module "products/HomePage" {
+  const HomePage: React.ComponentType;
+  export default HomePage;
+}
+
+declare module "products/Catalog" {
+  const Catalog: React.ComponentType;
+  export default Catalog;
 }
 
 declare module "productdetails/ProductDetails" {
