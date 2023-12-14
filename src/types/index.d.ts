@@ -22,3 +22,13 @@ declare module "cart/useCart" {
   const useCart: () => any;
   export default useCart;
 }
+
+declare module "checkout/Checkout" {
+  const Checkout: React.ComponentType;
+  export default Checkout;
+}
+
+declare module "checkout/OrderComplete" {
+  const OrderComplete: React.ComponentType;
+  export default OrderComplete;
+}

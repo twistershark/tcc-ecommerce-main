@@ -6,6 +6,8 @@ import HomePage from "products/HomePage";
 import Catalog from "products/Catalog";
 import ProductDetails from "productdetails/ProductDetails";
 import Cart from "cart/Cart";
+import Checkout from "checkout/Checkout";
+import OrderComplete from "checkout/OrderComplete";
 
 export function Routes() {
   return (
@@ -16,6 +18,8 @@ export function Routes() {
           <Route path="/produtos" element={<Catalog />} />
           <Route path="/produto/:id" element={<ProductDetails />} />
           <Route path="/carrinho" element={<Cart />} />
+          <Route path="/pagamento" element={<Checkout />} />
+          <Route path="/pedido-realizado" element={<OrderComplete />} />
         </Route>
       </Router>
     </BrowserRouter>
