@@ -7,7 +7,7 @@ const productsURL = process.env.PRODUCTS_URL || "http://localhost:3001";
 const productDetailsURL =
   process.env.PRODUCT_DETAILS_URL || "http://localhost:3002";
 const cartURL = process.env.CART_URL || "http://localhost:3003";
-const checkoutURL = process.env.CART_URL || "http://localhost:3004";
+const checkoutURL = process.env.CHECKOUT_URL || "http://localhost:3004";
 const deployURL = process.env.DEPLOY_URL || "http://localhost:3000";
 
 module.exports = (_, argv) => ({
